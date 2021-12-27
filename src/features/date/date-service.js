@@ -1,3 +1,4 @@
+const { BadRequestError } = require("../../common");
 /**
  *
  * @param {String} val Date String in the form YYYY:MM:DD
@@ -9,10 +10,7 @@ const isValidDate = (val) => {
     return false;
 };
 
-const getDateToN = (n, cb) => {
-    if (!isValidDate(n)) {
-        return cb("The date provided is not valid");
-    }
+const getDateToN = (n) => {
     const today = new Date().getTime();
     const future = new Date(n).getTime();
 
