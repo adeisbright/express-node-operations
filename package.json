@@ -13,7 +13,8 @@
     "integrationcoverage": "nyc npm run integrationtest",
     "lint": "eslint .",
     "lint-fix": "npm run lint -- --fix",
-    "pretest": "npm run lint"
+    "pretest": "npm run lint" , 
+    "test-features" : "mocha ./src/features/*/*.test.js"
   },
   "keywords": [
     "Deveopers Operations",
