@@ -14,7 +14,8 @@
     "lint": "eslint .",
     "lint-fix": "npm run lint -- --fix",
     "pretest": "npm run lint",
-    "test-features": "mocha ./src/features/*/*.test.js"
+    "test-features": "mocha ./src/features/*/*.test.js" , 
+    "check-coverage" : "nyc npm run test-features"
   },
   "keywords": [
     "Deveopers Operations",

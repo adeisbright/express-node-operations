@@ -2,7 +2,7 @@ const winston = require("winston");
 const { LoggingWinston } = require("@google-cloud/logging-winston");
 const path = require("path");
 
-const { combine, timestamp, prettyPrint, label } = winston.format;
+const { combine, timestamp, prettyPrint } = winston.format;
 const errorFile = path.join("./", "/logs/error.log");
 const infoFile = path.join("./", "/logs/info.log");
 

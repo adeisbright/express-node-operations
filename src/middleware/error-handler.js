@@ -1,12 +1,7 @@
-const {
-    ErrorAlert,
-    BaseError,
-    consoleLogger,
-    fileLogger,
-} = require("../common");
+const { ErrorAlert, fileLogger } = require("../common");
 
 const errorHandler = (err, req, res, next) => {
-    let errorAlert = new ErrorAlert(err.message, err.name);
+    const errorAlert = new ErrorAlert(err.message, err.name);
     errorAlert.notify();
     const errorMessage = `${req.ip} : ${req.method} ${req.url} ${err.statusCode} :${err.name} ${err.message} `;
 

@@ -1,6 +1,6 @@
-const { getDateToN } = require("./date-service");
+const {getToday} = require("./date-service");
 const dateRouter = require("./date-routes");
 module.exports = {
-    getDateToN,
-    dateRouter,
+  getToday,
+  dateRouter,
 };

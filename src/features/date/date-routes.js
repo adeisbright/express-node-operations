@@ -1,8 +1,8 @@
 const express = require("express");
-const { computeDate } = require("./date-controller");
-const { authenticateRequest } = require("../../middleware");
+const {fetchDate} = require("./date-controller");
+const {authenticateRequest} = require("../../middleware");
 const dateRouter = express.Router();
 
-dateRouter.post("/get-tomorrow", authenticateRequest, computeDate);
+dateRouter.get("/get-date", authenticateRequest, fetchDate);
 
 module.exports = dateRouter;

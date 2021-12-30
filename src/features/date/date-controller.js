@@ -1,20 +1,11 @@
-const { getDateToN } = require("./date-service");
-const {
-    NotFoundError,
-    ApplicationError,
-    ForbiddenError,
-    NotAuthorizeError,
-    BaseError,
-    BadRequestError,
-} = require("../../common");
+const { getToday } = require("./date-service");
+const { ApplicationError } = require("../../common");
 
-async function computeDate(req, res, next) {
+async function fetchDate(req, res, next) {
     try {
-        const { date } = req.body;
-        let calculateDate = getDateToN(date);
         res.status(200).json({
             data: {
-                body: calculateDate,
+                body: getToday.numericDate,
             },
         });
     } catch (error) {
@@ -23,5 +14,5 @@ async function computeDate(req, res, next) {
 }
 
 module.exports = {
-    computeDate,
+    fetchDate,
 };
